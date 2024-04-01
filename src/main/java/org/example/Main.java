@@ -4,7 +4,7 @@ import java.util.*;
 
 
 public class Main {
-
+//Made my own methods to create the random array and targets.
     public static void main(String[] args) {
         List<Integer> arr = getRandArr();
         Integer target = getRandNum();
@@ -15,6 +15,9 @@ public class Main {
 
 
     public static int[] getTwoSum(List<Integer> arr, int target){
+//        Takes each element, compares the difference of said element and the target
+//        looks for another element in the array that would add up to the target.
+//        Works with one-pass of the array.
         Map<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i < arr.size(); i++) {
             int comp = target - arr.get(i);
